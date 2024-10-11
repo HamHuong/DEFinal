@@ -1,0 +1,23 @@
+{% extends 'accounts/main.html' %}
+
+{% block content%}
+
+<h1>Customer List</h1>
+
+<table id="customerTable" class="display">
+    <thead>
+        <tr>
+            <th>UserID</th>
+            <th>Propensity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cus in customer %}
+        <tr>
+            <td>{{ cus.userid }}</td>
+            <td>{{ cus.propensity }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{%endblock%}
